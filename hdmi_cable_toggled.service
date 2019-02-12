@@ -1,0 +1,10 @@
+[Unit]
+Description=HDMI cable hotplug
+
+[Service]
+Type=simple
+RemainAfterExit=no
+ExecStart=/usr/local/bin/hdmi_cable_toggled.sh
+
+[Install]
+WantedBy=multi-user.target
