@@ -19,7 +19,7 @@ if [[ $STATUS == connected ]]; then
         xrandr --output LVDS1 --auto --primary --output HDMI1 --auto --right-of LVDS1
         sudo -u "$USER_NAME" pactl --server "$PULSE_SERVER" set-card-profile 0 output:analog-stereo+input:analog-stereo
     else
-        xrandr --output LVDS1 --off --output HDMIi1 --auto
+        xrandr --output LVDS1 --off --output HDMI1 --auto
         sudo -u "$USER_NAME" pactl --server "$PULSE_SERVER" set-card-profile 0 output:hdmi-stereo+input:analog-stereo
     fi
 elif [[ $STATUS == disconnected ]]; then
